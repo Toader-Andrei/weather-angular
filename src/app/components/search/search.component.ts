@@ -16,7 +16,7 @@ export class SearchComponent {
 
   onSubmit() {
     if (!this.city) {
-      alert('mai');
+      alert('Please enter a real city name');
     }
 
     this.weatherService.getCity(this.city).subscribe((cityLocation) => {
