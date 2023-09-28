@@ -1,0 +1,39 @@
+// card
+
+.primary-info .fa-solid{
+    font-size:6em;
+    color: #B6B6B4;
+}
+
+.primary-info .fa-sun{
+    color: #FFE87C;
+}
+
+.fa-regular, .fa-solid{
+    font-size: 2em;
+    margin: 5px;
+}
+p {
+    margin-bottom: 0;
+}
+
+.dates{ 
+    font-size: 9px;
+    width: 266px;
+}
+
+.location {
+    width: 266px;
+}
+
+.footage { 
+    width: 266px;
+}
+
+.border {
+    border:  solid black 2px !important;
+}
+
+.card {
+    width: 800px;
+}

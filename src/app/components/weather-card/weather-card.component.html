@@ -1,0 +1,85 @@
+<h2 class="d-flex justify-content-center mt-5 fw-normal mb-5">
+  Current weather and forecasts in your city
+</h2>
+<div class="container justify-content-center card border" *ngIf="weatherData">
+  <div class="text-center">
+    <div
+      class="d-flex align-items-center justify-content-center justify-content-around my-3 primary-info"
+    >
+      <div class="footage">
+        <i
+          class="fa-solid fa-cloud"
+          *ngIf="weatherData.list[0].weather[0].main === 'Clouds'"
+        ></i>
+        <i
+          class="fa-solid fa-cloud-showers-heavy"
+          *ngIf="weatherData.list[0].weather[0].main === 'Rain'"
+        ></i>
+        <i
+          class="fa-solid fa-sun"
+          *ngIf="weatherData.list[0].weather[0].main === 'Clear'"
+        ></i>
+      </div>
+      <div class="location text-center">
+        <div class="temperature">
+          <h2 class="m-0">{{ weatherData.list[0].main.temp }}°C</h2>
+        </div>
+        <div class="city">
+          <h2 class="m-0">{{ weatherData.city.name }}</h2>
+        </div>
+        <div class="real-weather text-secondary">
+          {{ weatherData.list[0].weather[0].description }}
+        </div>
+      </div>
+      <div class="dates text-end">
+        <div class="update text-secondary fw-bold">
+          <p>
+            <span class="bg-body-secondary"
+              >LAST UPDATE AT: {{ weatherData.list[0].dt_txt }}</span
+            >
+          </p>
+        </div>
+        <div class="time">
+          <h2 class="m-0">{{ weatherData.list[0].dt_txt }}</h2>
+        </div>
+        <div class="date">
+          <h6>2023, {{ weatherData.city.country }}</h6>
+        </div>
+      </div>
+    </div>
+    <hr />
+    <div>
+      <h5 class="my-4">Forecast for the next 9 hours</h5>
+      <hr />
+      <div class="d-flex justify-content-between px-5 mb-3">
+        <div *ngFor="let weatherData of weatherData.list | slice : 0 : 3">
+          <p>{{ weatherData.dt_txt }}</p>
+          <i
+            class="fa-solid fa-cloud"
+            *ngIf="weatherData.weather[0].main === 'Clouds'"
+          ></i>
+          <i
+            class="fa-solid fa-cloud-showers-heavy"
+            *ngIf="weatherData.weather[0].main === 'Rain'"
+          ></i>
+          <i
+            class="fa-solid fa-sun"
+            *ngIf="weatherData.weather[0].main === 'Clear'"
+          ></i>
+          <p class="highs">{{ weatherData.main.temp_max }}°C</p>
+          <p class="lows bg-body-secondary">
+            {{ weatherData.main.temp_min }}°C
+          </p>
+          <p>{{ weatherData.weather[0].description }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- <i class="fa-solid fa-cloud"></i> -->
+<!-- <i class="fa-solid fa-cloud-sun-rain"></i> -->
+<!-- <i class="fa-solid fa-cloud-bolt"></i> -->
+<!-- <i class="fa-solid fa-moon"></i> -->
+<!-- <i class="fa-solid fa-wind"></i> -->
+<!-- <i class="fa-solid fa-cloud-showers-heavy"></i> -->
+<!-- <i class="fa-solid fa-cloud-sun"></i> -->
