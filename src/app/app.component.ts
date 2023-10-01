@@ -9,8 +9,12 @@ import { Weather } from './Weather';
 })
 export class AppComponent {
   weatherData!: Weather;
+  actualDate!: number;
 
   addWeather(weather: Weather): void {
     this.weatherData = weather;
+  }
+  selectedDate(date: number): void {
+    this.actualDate = date;
   }
 }

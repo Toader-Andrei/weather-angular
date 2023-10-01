@@ -24,4 +24,5 @@ export interface Weather {
     country: string;
     population: number;
   };
+  time: number;
 }

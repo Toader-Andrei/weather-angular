@@ -24,7 +24,7 @@ export class WeatherService {
         lat +
         '&lon=' +
         lon +
-        '&appid=2520ce5d5a48c4406277d6400f51ebaa&units=metric'
+        '&dt=1696032000&appid=2520ce5d5a48c4406277d6400f51ebaa&units=metric'
     );
   }
 }

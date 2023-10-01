@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Weather } from 'src/app/Weather';
 import { WeatherService } from 'src/app/weather.service';
 
@@ -20,15 +20,16 @@ export class SearchComponent {
     }
 
     this.weatherService.getCity(this.city).subscribe((cityLocation) => {
+      console.log(cityLocation);
+
       this.weatherService
         .getWeather(cityLocation[0].lat, cityLocation[0].lon)
         .subscribe((weather) => {
           console.log(weather);
 
           this.onWeather.emit(weather);
+          this.city = '';
         });
     });
-
-    this.city = '';
   }
 }
