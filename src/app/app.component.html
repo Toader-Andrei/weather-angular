@@ -1,5 +1,11 @@
-<app-search (onWeather)="addWeather($event)"></app-search>
+<app-search
+  (onWeather)="addWeather($event)"
+  (onAirPollution)="addAirPollution($event)"
+></app-search>
 <app-weather-card [weatherData]="weatherData"></app-weather-card>
-<app-pollution-card *ngIf="weatherData"></app-pollution-card>
+<app-pollution-card
+  *ngIf="weatherData"
+  [airPollution]="airPollution"
+></app-pollution-card>
 
 <!-- <app-test-input></app-test-input> -->

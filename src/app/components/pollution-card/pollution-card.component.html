@@ -1,3 +1,18 @@
-<div>
-  <button>Show more details about air pollution!</button>
+<div class="d-flex align-items-center justify-content-center mt-5">
+  <button type="button" class="btn btn-dark" (click)="onShowAirPollution()">
+    Show more details about air pollution!
+  </button>
 </div>
+<div *ngIf="showDetailsCard">
+  <div class="card container w-25 mt-4">
+    <div class="d-flex">
+      <p class="fw-bold m-0">Carbon dioxide:</p>
+      <span class="ps-2"> {{ airPollution.list[0].components.co }}</span>
+    </div>
+    <div class="d-flex">
+      <p class="fw-bold m-0">Nitrogen dioxide:</p>
+      <span class="ps-2"> {{ airPollution.list[0].components.no2 }}</span>
+    </div>
+  </div>
+</div>
+<!-- awb 3275330930075 -->

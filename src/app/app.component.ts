@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { City } from './City';
 import { Weather } from './Weather';
+import { Air } from './Air';
 
 @Component({
   selector: 'app-root',
@@ -9,12 +9,13 @@ import { Weather } from './Weather';
 })
 export class AppComponent {
   weatherData!: Weather;
-  actualDate!: number;
+  airPollution!: Air;
 
   addWeather(weather: Weather): void {
     this.weatherData = weather;
   }
-  selectedDate(date: number): void {
-    this.actualDate = date;
+
+  addAirPollution(airComponents: Air): void {
+    this.airPollution = airComponents;
   }
 }

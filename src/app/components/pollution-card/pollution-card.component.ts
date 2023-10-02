@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { Air } from 'src/app/Air';
 
 @Component({
   selector: 'app-pollution-card',
@@ -6,5 +7,13 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./pollution-card.component.scss'],
 })
 export class PollutionCardComponent {
-  @Input() pollutionData!: any;
+  @Input() airPollution!: Air;
+
+  showDetailsCard: boolean = false;
+
+  onShowAirPollution() {
+    this.showDetailsCard = true;
+
+    // this.co2 = this.airPollution.list[0].components.co;
+  }
 }
