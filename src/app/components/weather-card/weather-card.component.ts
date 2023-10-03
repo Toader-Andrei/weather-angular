@@ -8,4 +8,10 @@ import { Weather } from 'src/app/Weather';
 })
 export class WeatherCardComponent {
   @Input() weatherData!: Weather;
+
+  getHour(time: string) {
+    const date: Date = new Date(time);
+
+    return date.getHours();
+  }
 }

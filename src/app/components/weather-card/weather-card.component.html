@@ -50,7 +50,7 @@
       </div>
       <hr />
       <div>
-        <h5 class="my-4">Forecast for the next 9 hours</h5>
+        <h5 class="my-4">Forecast for the next 18 hours</h5>
         <hr class="m-0" />
         <div class="mb-3">
           <div class="d-flex">
@@ -69,7 +69,15 @@
                   *ngIf="weatherDetails.weather[0].main === 'Rain'"
                 ></i>
                 <i
-                  class="fa-solid fa-sun"
+                  [ngClass]="{
+                    'fa-sun':
+                      getHour(weatherDetails.dt_txt) < 18 ||
+                      getHour(weatherDetails.dt_txt) >= 6,
+                    'fa-moon': 
+                    getHour(weatherDetails.dt_txt) >= 18 ||
+                    getHour(weatherDetails.dt_txt) < 6,
+                  }"
+                  class="fa-solid"
                   *ngIf="weatherDetails.weather[0].main === 'Clear'"
                 ></i>
                 <p class="highs">{{ weatherDetails.main.temp_max }}°C</p>

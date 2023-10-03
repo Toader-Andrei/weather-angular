@@ -7,12 +7,65 @@
   <div class="card container w-25 mt-4">
     <div class="d-flex">
       <p class="fw-bold m-0">Carbon dioxide:</p>
-      <span class="ps-2"> {{ airPollution.list[0].components.co }}</span>
+      <span
+        class="ps-2"
+        [ngClass]="{
+          'text-danger': airPollution.list[0].components.co > 9400,
+          'text-warning':
+            airPollution.list[0].components.co > 4400 &&
+            airPollution.list[0].components.co < 9399,
+          'text-success': airPollution.list[0].components.co < 4399
+        }"
+      >
+        {{ airPollution.list[0].components.co }}</span
+      >
     </div>
     <div class="d-flex">
       <p class="fw-bold m-0">Nitrogen dioxide:</p>
-      <span class="ps-2"> {{ airPollution.list[0].components.no2 }}</span>
+      <span
+        class="ps-2"
+        [ngClass]="{
+          'text-danger': airPollution.list[0].components.no2 > 149,
+          'text-warning':
+            airPollution.list[0].components.no2 > 40 &&
+            airPollution.list[0].components.no2 < 69,
+          'text-success': airPollution.list[0].components.no2 < 39
+        }"
+      >
+        {{ airPollution.list[0].components.no2 }}</span
+      >
+    </div>
+    <div class="d-flex">
+      <p class="fw-bold m-0">Ammonia:</p>
+      <span
+        class="ps-2"
+        [ngClass]="{
+          'text-danger': airPollution.list[0].components.nh3 > 200,
+          'text-warning':
+            airPollution.list[0].components.nh3 > 51 &&
+            airPollution.list[0].components.nh3 < 199,
+          'text-success': airPollution.list[0].components.nh3 < 50
+        }"
+      >
+        {{ airPollution.list[0].components.nh3 }}</span
+      >
+    </div>
+    <div class="d-flex">
+      <p class="fw-bold m-0">Particulates:</p>
+      <span
+        class="ps-2"
+        [ngClass]="{
+          'text-danger': airPollution.list[0].components.pm2_5 > 25,
+          'text-warning':
+            airPollution.list[0].components.pm2_5 > 10 &&
+            airPollution.list[0].components.pm2_5 < 24,
+          'text-success': airPollution.list[0].components.pm2_5 < 9
+        }"
+      >
+        {{ airPollution.list[0].components.pm2_5 }}</span
+      >
     </div>
   </div>
 </div>
+
 <!-- awb 3275330930075 -->

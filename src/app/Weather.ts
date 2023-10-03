@@ -12,7 +12,7 @@ export interface Weather {
           description: string;
         }
       ];
-      dt_txt: number;
+      dt_txt: string;
     }
   ];
   city: {

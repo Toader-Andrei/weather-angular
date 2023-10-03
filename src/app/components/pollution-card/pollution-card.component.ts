@@ -13,7 +13,5 @@ export class PollutionCardComponent {
 
   onShowAirPollution() {
     this.showDetailsCard = true;
-
-    // this.co2 = this.airPollution.list[0].components.co;
   }
 }

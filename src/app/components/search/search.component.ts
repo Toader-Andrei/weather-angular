@@ -23,13 +23,9 @@ export class SearchComponent {
     }
 
     this.weatherService.getCity(this.city).subscribe((cityLocation) => {
-      console.log(cityLocation);
-
       this.weatherService
         .getWeather(cityLocation[0].lat, cityLocation[0].lon)
         .subscribe((weather) => {
-          console.log(weather);
-
           this.onWeather.emit(weather);
 
           this.city = '';
@@ -38,8 +34,6 @@ export class SearchComponent {
       this.weatherService
         .getAirPollution(cityLocation[0].lat, cityLocation[0].lon)
         .subscribe((airPollution) => {
-          console.log(airPollution);
-
           this.onAirPollution.emit(airPollution);
         });
     });
