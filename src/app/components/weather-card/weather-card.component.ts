@@ -14,4 +14,8 @@ export class WeatherCardComponent {
 
     return date.getHours();
   }
+
+  mathCeil(celcius: number) {
+    return (celcius = Math.ceil(this.weatherData.list[0].main.temp));
+  }
 }

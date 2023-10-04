@@ -1,0 +1,26 @@
+.card {
+    min-width: 600px;
+    max-width: 600px;
+}
+
+.green-bg {
+    background-color: green;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    margin: 6px;
+}
+.warning-bg {
+    background-color: #f0ad4e;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    margin: 6px;
+}
+.danger-bg {
+    background-color: #d9534f;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    margin: 6px;
+}

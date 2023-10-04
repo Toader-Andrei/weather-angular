@@ -8,7 +8,6 @@ import { WeatherCardComponent } from './components/weather-card/weather-card.com
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { PollutionCardComponent } from './components/pollution-card/pollution-card.component';
-import { TestInputComponent } from './components/test-input/test-input.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +15,6 @@ import { TestInputComponent } from './components/test-input/test-input.component
     SearchComponent,
     WeatherCardComponent,
     PollutionCardComponent,
-    TestInputComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
   providers: [],

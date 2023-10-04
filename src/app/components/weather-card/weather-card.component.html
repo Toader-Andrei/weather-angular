@@ -17,13 +17,21 @@
             *ngIf="weatherData.list[0].weather[0].main === 'Rain'"
           ></i>
           <i
-            class="fa-solid fa-sun"
+            [ngClass]="{
+                    'fa-sun':
+                      getHour(weatherData.list[0].dt_txt) < 18 ||
+                      getHour(weatherData.list[0].dt_txt) >= 6,
+                    'fa-moon': 
+                    getHour(weatherData.list[0].dt_txt) >= 18 ||
+                    getHour(weatherData.list[0].dt_txt) < 6,
+                  }"
+            class="fa-solid"
             *ngIf="weatherData.list[0].weather[0].main === 'Clear'"
           ></i>
         </div>
         <div class="location text-center">
           <div class="temperature">
-            <h2 class="m-0">{{ weatherData.list[0].main.temp }}°C</h2>
+            <h2 class="m-0">{{ mathCeil(weatherData.list[0].main.temp) }}°C</h2>
           </div>
           <div class="city">
             <h2 class="m-0">{{ weatherData.city.name }}</h2>
@@ -59,7 +67,9 @@
               class="d-flex"
             >
               <div class="border-start border-end border-bottom">
-                <p>{{ weatherDetails.dt_txt }}</p>
+                <p>
+                  {{ weatherDetails.dt_txt }}
+                </p>
                 <i
                   class="fa-solid fa-cloud"
                   *ngIf="weatherDetails.weather[0].main === 'Clouds'"
