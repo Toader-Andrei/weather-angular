@@ -1,6 +1,5 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { Air } from 'src/app/Air';
-import { City } from 'src/app/City';
 import { Weather } from 'src/app/Weather';
 import { WeatherService } from 'src/app/weather.service';
 
