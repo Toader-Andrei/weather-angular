@@ -16,6 +16,6 @@ export class WeatherCardComponent {
   }
 
   mathCeil(celcius: number) {
-    return (celcius = Math.ceil(this.weatherData.list[0].main.temp));
+    return Math.ceil(celcius);
   }
 }

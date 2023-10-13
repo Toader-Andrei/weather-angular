@@ -90,9 +90,11 @@
                   class="fa-solid"
                   *ngIf="weatherDetails.weather[0].main === 'Clear'"
                 ></i>
-                <p class="highs">{{ weatherDetails.main.temp_max }}°C</p>
+                <p class="highs">
+                  {{ mathCeil(weatherDetails.main.temp_max) }}°C
+                </p>
                 <p class="lows bg-body-secondary">
-                  {{ weatherDetails.main.temp_min }}°C
+                  {{ mathCeil(weatherDetails.main.temp_min) }}°C
                 </p>
                 <p>{{ weatherDetails.weather[0].description }}</p>
               </div>

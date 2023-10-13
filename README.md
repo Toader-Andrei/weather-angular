@@ -25,3 +25,17 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+## PRINT-SCREENS
+
+### 1. Home Page:
+
+![cheese!](/public/initial.png)
+
+### 2. Weather Card:
+
+![cheese!](/public/search.png)
+
+### 3.Air Pollution Card:
+
+![cheese!](/public/air-pollution.png)
