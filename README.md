@@ -1,4 +1,4 @@
-# WeatherBy - Real Weather Searcher application developted with OpenWeather
+# WeatherBy - Angular real weather searcher application developted with OpenWeather
 
 ## Application description:
 
