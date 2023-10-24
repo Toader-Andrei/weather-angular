@@ -21,3 +21,9 @@ Weather is a real weather application suitable for users who are willing to see 
 ### 3.Air Pollution Card:
 
 ![cheese!](/public/air-pollution.png)
+
+## Please see below from futher intructions.
+
+### `1. npm install`
+
+### `2. ng serve --open`
