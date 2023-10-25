@@ -22,7 +22,7 @@ Weather is a real weather application suitable for users who are willing to see 
 
 ![cheese!](/public/air-pollution.png)
 
-## Please see below from futher intructions.
+## Please see below for futher intructions.
 
 ### `1. npm install`
 
